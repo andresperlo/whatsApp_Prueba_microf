@@ -12,12 +12,10 @@
     <style>
         body {
             background: url('https://res.cloudinary.com/dbb9coys1/image/upload/v1633820285/starswars_cdmfrd.jpg');
-          
-
         }
 
         .ArrowIcon {
-            font-size: 2rem;
+            font-size: 1rem;
             align-items: center;
         }
 
@@ -61,31 +59,38 @@
             border-radius: 50%;
             background: green;
         }
+
+        @media only screen and (max-width: 700px) {
+            .divResponsivNav {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <nav class="nav bg-dark d-flex justify-content-between py-3">
-        <div class="d-flex align-items-center">
-            <i class="fas fa-arrow-circle-left text-white ArrowIcon px-3"></i>
-            <img src="https://res.cloudinary.com/dbb9coys1/image/upload/v1633819036/altaFachaR_px7vli.png" alt=""
-                width="7%">
-            <a class="nav-link text-white" href="/api">Andres Perlo</a>
+    <nav class="nav bg-dark py-3">
+        <div class="divResponsivNav">
+            <div class="d-flex align-items-center">
+                <i class="fas fa-arrow-circle-left text-white ArrowIcon px-3"></i>
+                <img src="https://res.cloudinary.com/dbb9coys1/image/upload/v1633819036/altaFachaR_px7vli.png" alt=""
+                    width="10%">
+                <a class="nav-link text-white" href="/api">Andres Perlo</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="fas fa-video text-white px-3"></i>
+                <i class="fas fa-phone-alt text-white px-3"></i>
+                <i class="fas fa-ellipsis-v text-white px-3"></i>
+            </div>
         </div>
-        <div class="d-flex align-items-center">
-            <i class="fas fa-video text-white px-3"></i>
-            <i class="fas fa-phone-alt text-white px-3"></i>
-            <i class="fas fa-ellipsis-v text-white px-3"></i>
-        </div>
-
     </nav>
     <div id="caja"></div>
-    
+
     <form onsubmit="return addMsn()" class="d-flex justify-content-center">
         <input type="text" class="btnNB" placeholder="nombre" id="nb" required />
         <input type="text" class="btnInput" placeholder="msn" id="msn" required />
-        <button type="submit" class="btnSend" onclick="disabled()"><i
-                class="fas fa-location-arrow text-white"></i></button>
+        <button type="submit" class="btnSend"><i class="fas fa-location-arrow text-white"></i></button>
     </form>
     <div>
         <button class="btnStart" id="btnStart">Empezar</button>
