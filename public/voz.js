@@ -25,13 +25,12 @@ rec.onerror = (event) => {
 
 function Change() {
     if (contador === 0) {
-
+        
         rec.start();
         btnStart.classList.add('On')
         contador = 1
 
     } else {
-
         rec.abort();
         btnStart.classList.remove('On')
         contador = 0
